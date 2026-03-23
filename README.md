@@ -68,7 +68,36 @@ The previously designed DFA must now be implemented in Prolog within the file **
   ```
 Defines the transitions of the automaton. Each fact represents a valid move between states for a given input symbol, directly encoding the DFA structure. The following table illustrates all of the possible transitions:
 
-
+| Starting State | Input | Final State |
+|---------------|-------|------------|
+| q0  | N | q1  |
+| q1  | i | q2  |
+| q1  | u | q9  |
+| q1  | o | q19 |
+| q1  | e | q24 |
+| q1  | a | q13 |
+| q2  | n | q3  |
+| q2  | m | q4  |
+| q4  | r | q5  |
+| q5  | a | q6  |
+| q6  | i | q7  |
+| q7  | s | q8  |
+| q9  | m | q10 |
+| q10 | e | q11 |
+| q11 | n | q12 |
+| q13 | u | q14 |
+| q14 | g | q15 |
+| q15 | r | q16 |
+| q16 | i | q17 |
+| q17 | m | q18 |
+| q19 | g | q20 |
+| q20 | o | q21 |
+| q21 | t | q22 |
+| q22 | h | q23 |
+| q24 | g | q25 |
+| q25 | y | q26 |
+| q26 | t | q27 |
+| q27 | h | q28 |
 
 ```prolog
   accepting_state(State)
