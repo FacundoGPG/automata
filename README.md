@@ -28,7 +28,6 @@ In this project, a DFA was selected. Since the language consists of a finite and
 
 The automaton was built by assigning each word a path from the initial state. Common prefixes such as **"N"**, **"Ni"**, and **"Nau"** are shared to simplify the structure. When a word is a prefix of another (e.g., *Naug* and *Naugrim*), the intermediate state is marked as accepting.
 
----
 
 # Version 1.0
 
