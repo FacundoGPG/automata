@@ -149,3 +149,10 @@ if (current_state, letter) not in path:
 ```
 
 Despite these differences, the overall time complexity remains O(n), since each symbol is processed once. However, the Prolog implementation is more concise and closer to the theoretical model of an automaton, while the Python version requires a more explicit control flow.
+
+---
+
+# References
+
+- Hopcroft, J. E., Motwani, R., & Ullman, J. D. (2001). Introduction to Automata Theory, Languages, and Computation (2nd ed.). Addison-Wesley.
+- Salo, D. (2004). A Gateway to Sindarin: A Grammar of an Elvish Language from J.R.R. Tolkien’s Lord of the Rings. University of Utah Press.
