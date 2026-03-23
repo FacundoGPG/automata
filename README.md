@@ -16,15 +16,7 @@ The objective is to design a finite automaton that recognizes this language, tra
 
 A = (Q, Σ, δ, q0, F)
 
-where:
-
-- **Q** is a finite set of states  
-- **Σ** is the alphabet  
-- **δ** is the transition function  
-- **q0** is the initial state  
-- **F** is the set of accepting states  
-
-(Hopcroft et al., 2001).
+where Q is a finite set of states, Σ is the alphabet, δ is the transition function, q0 is the initial state, and F is the set of accepting states (Hopcroft et al., 2001).
 
 A Non-deterministic Finite Automaton (NFA) differs in that its transition function can return a set of states instead of a single state, allowing multiple possible computation paths for the same input (Hopcroft et al., 2001).
 
