@@ -85,4 +85,4 @@ Entry point of the program. It initializes the automaton from the initial state 
 
 # Tests
 
-To test the automaton, load `Sindarin.pl` in Prolog and run queries using:
+To test the automaton, load `Sindarin.pl` in Prolog and run queries using "`check_word([]).`”. Each word must be represented as a list of symbols (‘N’, e, a, etc.).
