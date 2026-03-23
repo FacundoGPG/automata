@@ -83,6 +83,6 @@ Entry point of the program. It initializes the automaton from the initial state 
 
 ---
 
-# Test
+# Tests
 
 To test the automaton, load `Sindarin.pl` in Prolog and run queries using:
