@@ -24,31 +24,24 @@ In this project, a DFA was selected. Since the language consists of a finite and
 
 ---
 
-# Design
+## Design
 
 The automaton was built by assigning each word a path from the initial state. Common prefixes such as **"N"**, **"Ni"**, and **"Nau"** are shared to simplify the structure. When a word is a prefix of another (e.g., *Naug* and *Naugrim*), the intermediate state is marked as accepting.
 
-
-# Version 1.0
-
-<!-- INSERT IMAGE HERE -->
-![Version 1.0 Automaton](image_v1_placeholder.png)
+### Version 1.0
 
 The first version used a single accepting state for all words. This caused ambiguity, since some states had more than one transition with the same symbol. Shorter words like *Naug* were not clearly accepted, and some transitions skipped steps, making the automaton harder to read. Due to these issues, the design needed to be improved.
 
----
-
-# Version 2.0
-
-<!-- INSERT IMAGE HERE -->
-![Version 2.0 Automaton](image_v2_placeholder.png)
+### Version 2.0
 
 The second version reorganizes the automaton into clearer paths. Multiple accepting states are used so each word is recognized at the correct point. Transitions follow a more ordered sequence, improving clarity. This version correctly represents the language and is easier to understand.
 
 ---
 
-# Regular Expression
+## Regular Expression
 
-Another way to represent the automaton is through a regular expression. A regular expression is a formal notation used to describe sets of strings and is equivalent in expressive power to finite automata (Hopcroft et al., 2001). Since the language is finite and consists of specific words, the equivalent regular expression can be constructed using the union (`|`) operator to enumerate all valid options.
+Another way to represent the automaton is through a regular expression. A regular expression is a formal notation used to describe sets of strings and is equivalent in expressive power to finite automata (Hopcroft et al., 2001).
+
+Since the language is finite and consists of specific words, the equivalent regular expression can be constructed using the union (`|`) operator to enumerate all valid options.
 
 The resulting expression is:
