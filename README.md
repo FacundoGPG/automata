@@ -66,7 +66,9 @@ The previously designed DFA must now be implemented in Prolog within the file **
 ```prolog
   path(CurrentState, Symbol, NextState)
   ```
-Defines the transitions of the automaton. Each fact represents a valid move between states for a given input symbol, directly encoding the DFA structure.
+Defines the transitions of the automaton. Each fact represents a valid move between states for a given input symbol, directly encoding the DFA structure. The following table illustrates all of the possible transitions:
+
+
 
 ```prolog
   accepting_state(State)
