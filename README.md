@@ -76,8 +76,8 @@ Defines the transitions of the automaton. Each fact represents a valid move betw
   ```
 Specifies the accepting states. A word is valid only if the automaton finishes in one of these states after processing all symbols.
 
- ```prolog
-  run_automaton([], CurrentState)
+```prolog
+ run_automaton([], CurrentState)
   ```
 Base case of the recursion. When no symbols remain, the automaton checks whether the current state is accepting.
 
