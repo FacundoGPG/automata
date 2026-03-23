@@ -6,7 +6,7 @@ Facundo Gael Piñeiro González A01666626
 
 ## Description
 
-The language used in this project is based on the Elven languages created by J. R. R. Tolkien for his Middle-earth universe. These languages were constructed with their own grammar and phonology, with Sindarin and Quenya being among the most developed and widely used (Salo, 2004). In particular, Sindarin is used in names of places, regions and for writing poetic and prose texts, making it suitable for modeling lexical recognition.
+The language used in this project is based on the Elven languages created by J. R. R. Tolkien for his Middle-earth universe. These languages were constructed with their own grammar and phonology, with Sindarin and Quenya being among the most developed and widely used. In particular, Sindarin is used in names of places, regions and for writing poetic and prose texts, making it suitable for modeling lexical recognition (Salo, 2004).
 
 For this project, a finite subset of Sindarin words was selected:
 
@@ -34,13 +34,13 @@ In this project, a DFA was selected. Since the language consists of a finite and
 
 The automaton was built by assigning each word a path from the initial state. Common prefixes such as **"N"**, **"Ni"**, and **"Nau"** are shared to simplify the structure. When a word is a prefix of another (e.g., *Naug* and *Naugrim*), the intermediate state is marked as accepting.
 
-### Version 1.0
+### V1
 
 <img width="1723" height="949" alt="DFA_v1" src="https://github.com/user-attachments/assets/1ab5d0a5-5af4-4aab-b214-da9a3f615c91" />
 
 The first version used a single accepting state for all words. This caused ambiguity, since some states had more than one transition with the same symbol. Shorter words like *Naug* were not clearly accepted, and some transitions skipped steps, making the automaton harder to read. Due to these issues, the design needed to be improved.
 
-### Version 2.0
+### V2
 
 <img width="1497" height="820" alt="DFA_v2" src="https://github.com/user-attachments/assets/487f0e7e-35a4-4bba-88ae-25365c0a29a2" />
 
