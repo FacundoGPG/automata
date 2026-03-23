@@ -36,13 +36,13 @@ The automaton was built by assigning each word a path from the initial state. Co
 
 ### Version 1.0
 
-![Version 1.0 Automaton](DFA_v1.png)
+<img width="1723" height="949" alt="DFA_v1" src="https://github.com/user-attachments/assets/1ab5d0a5-5af4-4aab-b214-da9a3f615c91" />
 
 The first version used a single accepting state for all words. This caused ambiguity, since some states had more than one transition with the same symbol. Shorter words like *Naug* were not clearly accepted, and some transitions skipped steps, making the automaton harder to read. Due to these issues, the design needed to be improved.
 
 ### Version 2.0
 
-![Version 2.0 Automaton](DFA_v2.png)
+<img width="1497" height="820" alt="DFA_v2" src="https://github.com/user-attachments/assets/487f0e7e-35a4-4bba-88ae-25365c0a29a2" />
 
 The second version reorganizes the automaton into clearer paths. Multiple accepting states are used so each word is recognized at the correct point. Transitions follow a more ordered sequence, improving clarity. This version correctly represents the language and is easier to understand.
 
@@ -116,7 +116,7 @@ check_word(['m', e, g, y]).
 check_word(['n', x]).
 ```
 
-![Tests Prolog](prolog_test.png)
+<img width="2514" height="1285" alt="prolog_test" src="https://github.com/user-attachments/assets/d8bb7f71-05b4-4251-bf16-191c8f8fc93b" />
 
 ---
 
