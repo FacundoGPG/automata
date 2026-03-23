@@ -66,7 +66,9 @@ The resulting expression is:
 
 The previously designed DFA must now be implemented in Prolog within the file **Sindarin.pl**. This implementation requires a separation between the DFA's structure and its execution. The resulting Prolog program is characterized by the following key components:
 
-- `path(CurrentState, Symbol, NextState)`
+- ```prolog
+  path(CurrentState, Symbol, NextState)
+  ```
 Defines the transitions of the automaton. Each fact represents a valid move between states for a given input symbol, directly encoding the DFA structure.
 
 - `accepting_state(State)`
