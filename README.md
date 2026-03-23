@@ -131,9 +131,21 @@ One limitation of the program is that it only accepts inputs as lists instead of
 In a language such as Python, the same automaton would be implemented differently:
 
 - Transitions would be stored in a structure such as a dictionary instead of facts like `path()`, for example:
-
 ```python
 path = {('q0', 'N'): 'q1'}
 ```
+- The execution would use a loop (e.g., for) instead of recursion, for example:
+```python
+for letter in word:
+```
+- The current state would be updated manually at each step, for example:
+```python
+current_state = path[(current_state, letter)]
+```
+- Explicit conditionals would be required to handle invalid transitions, for example:
+```python
+if (current_state, letter) not in path:
+   return False
+```
 
-
+Despite these differences, the overall time complexity remains O(n), since each symbol is processed once. However, the Prolog implementation is more concise and closer to the theoretical model of an automaton, while the Python version requires a more explicit control flow.
