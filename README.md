@@ -66,27 +66,27 @@ The resulting expression is:
 
 The previously designed DFA must now be implemented in Prolog within the file **Sindarin.pl**. This implementation requires a separation between the DFA's structure and its execution. The resulting Prolog program is characterized by the following key components:
 
-- ```prolog
+```prolog
   path(CurrentState, Symbol, NextState)
   ```
 Defines the transitions of the automaton. Each fact represents a valid move between states for a given input symbol, directly encoding the DFA structure.
 
-- ```prolog
+```prolog
   accepting_state(State)
   ```
 Specifies the accepting states. A word is valid only if the automaton finishes in one of these states after processing all symbols.
 
-- ```prolog
+ ```prolog
   run_automaton([], CurrentState)
   ```
 Base case of the recursion. When no symbols remain, the automaton checks whether the current state is accepting.
 
-- ```prolog
+```prolog
   run_automaton([Letter | Remaining], CurrentState)
   ```
 Recursive case. Processes the input list one symbol at a time, using `path()` to move between states until the list is fully consumed.
 
-- ```prolog
+```prolog
   check_word(Word)
   ```
 Entry point of the program. It initializes the automaton from the initial state (`q0`) and allows words to be tested directly.
@@ -97,7 +97,7 @@ Entry point of the program. It initializes the automaton from the initial state 
 
 To test the automaton, load `Sindarin.pl` in Prolog and run queries using "`check_word([]).`”. Each word must be represented as a list of symbols (‘N’, e, a, etc.).
 
-## Valid words (true)
+* Valid words (true)
 
 ```prolog
 check_word(['N', i, n]).
