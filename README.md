@@ -42,7 +42,7 @@ The first version used a single accepting state for all words. This caused ambig
 
 ### Version 2.0
 
-![Version 2.0 Automaton](image_v2.png)
+![Version 2.0 Automaton](DFA_v2.png)
 
 The second version reorganizes the automaton into clearer paths. Multiple accepting states are used so each word is recognized at the correct point. Transitions follow a more ordered sequence, improving clarity. This version correctly represents the language and is easier to understand.
 
