@@ -36,7 +36,7 @@ The automaton was built by assigning each word a path from the initial state. Co
 
 ### Version 1.0
 
-![Version 1.0 Automaton](image_v1.png)
+![Version 1.0 Automaton](DFA_v1.png)
 
 The first version used a single accepting state for all words. This caused ambiguity, since some states had more than one transition with the same symbol. Shorter words like *Naug* were not clearly accepted, and some transitions skipped steps, making the automaton harder to read. Due to these issues, the design needed to be improved.
 
