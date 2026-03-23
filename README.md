@@ -4,7 +4,6 @@ Facundo Gael Piñeiro González A01666626
 
 ---
 
-
 ## Description
 
 The language used in this project is based on the Elven languages created by J. R. R. Tolkien for his Middle-earth universe. These languages were constructed with their own grammar and phonology, with Sindarin and Quenya being among the most developed and widely used (Salo, 2004). In particular, Sindarin is used in names of places, regions and for writing poetic and prose texts, making it suitable for modeling lexical recognition.
@@ -58,9 +57,7 @@ The resulting expression is:
 
 (^N)(i(mrais|n)|umen|au(g|grim)|egyth|ogoth)
 
-
 ---
-
 
 ## Implementation
 
@@ -108,3 +105,33 @@ check_word(['N', a, u, g, r, i, m]).
 check_word(['N', o, g, o, t, h]).
 check_word(['N', e, g, y, t, h]).
 ```
+
+* Invalid words (false)
+
+```prolog
+check_word(['N', i]).
+check_word(['N', a, u, g, x]).
+check_word(['2', o, g, o]).
+check_word(['m', e, g, y]).
+check_word(['n', x]).
+```
+
+---
+
+# Analysis
+
+The implementation follows a linear evaluation of the input, processing one symbol at a time until the list becomes empty. Because of this sequential processing, the time complexity is **O(n)**, where *n* represents the length of the input word. Each evaluation step performs a constant-time transition lookup using the defined `path()` predicates, which ensures that the overall execution remains linear with respect to the input size.
+
+The space complexity is also **O(n)** due to the recursive nature of the program. Each recursive call to `run_automaton/2` is stored temporarily in the execution stack until the base case is reached, meaning memory usage grows proportionally to the number of processed symbols.
+
+A key design decision in this implementation is the separation between the automaton structure and its execution logic. The DFA structure is defined exclusively through `path()` facts and `accepting_state()` declarations, while the evaluation behavior is handled by `run_automaton()`. This separation improves readability and maintainability, since transitions can be modified or extended without changing the recursive evaluation mechanism.
+
+One limitation of the program is that inputs must be provided as lists rather than strings, which reduces usability from a practical perspective. Additionally, the automaton is tailored specifically to the defined Sindarin language subset, meaning that extending the language requires manually adding new transitions and accepting states.
+
+If the same automaton were implemented in a language such as Python, several structural differences would appear. Transitions would typically be stored in a data structure such as a dictionary instead of logical facts. For example:
+
+```python
+path = {('q0', 'N'): 'q1'}
+```
+
+
