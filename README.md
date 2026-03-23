@@ -30,9 +30,13 @@ The automaton was built by assigning each word a path from the initial state. Co
 
 ### Version 1.0
 
+![Version 1.0 Automaton](image_v1_placeholder.png)
+
 The first version used a single accepting state for all words. This caused ambiguity, since some states had more than one transition with the same symbol. Shorter words like *Naug* were not clearly accepted, and some transitions skipped steps, making the automaton harder to read. Due to these issues, the design needed to be improved.
 
 ### Version 2.0
+
+![Version 2.0 Automaton](image_v2_placeholder.png)
 
 The second version reorganizes the automaton into clearer paths. Multiple accepting states are used so each word is recognized at the correct point. Transitions follow a more ordered sequence, improving clarity. This version correctly represents the language and is easier to understand.
 
