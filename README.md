@@ -147,7 +147,7 @@ check_word([', e, g, y]).
 check_word([n, x]).
 ```
 
-<img width="2514" height="1285" alt="prolog_test" src="https://github.com/user-attachments/assets/d8bb7f71-05b4-4251-bf16-191c8f8fc93b" />
+<img width="1857" height="832" alt="prolog_test" src="https://github.com/user-attachments/assets/e8e532c8-cfe5-4e60-b657-ae36e5b409fe" />
 
 ---
 
