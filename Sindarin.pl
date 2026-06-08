@@ -1,6 +1,6 @@
 % PATHS
 
-path(q0, 'N', q1). % From q0, reading 'N' moves to q1
+path(q0, n , q1). % From q0, reading n moves to q1
 
 % From q1 it branches based on the next letter
 path(q1, i, q2).   % "Ni..."
