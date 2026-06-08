@@ -55,7 +55,7 @@ Since the language is finite and consists of specific words, the equivalent regu
 
 The resulting expression is:
 
-**(^N)(i(mrais|n)|umen|au(g|grim)|egyth|ogoth)**
+**(^n)(i(mrais|n)|umen|au(g|grim)|egyth|ogoth)**
 
 ---
 
@@ -70,7 +70,7 @@ Defines the transitions of the automaton. Each fact represents a valid move betw
 
 | Starting State | Input | Final State |
 |---------------|-------|------------|
-| q0  | N | q1  |
+| q0  | n | q1  |
 | q1  | i | q2  |
 | q1  | u | q9  |
 | q1  | o | q19 |
@@ -123,28 +123,28 @@ Entry point of the program. It initializes the automaton from the initial state 
 
 # Tests
 
-To test the automaton, load `Sindarin.pl` in Prolog and run queries using "`check_word([]).`”. Each word must be represented as a list of symbols (‘N’, e, a, etc.).
+To test the automaton, load `Sindarin.pl` in Prolog and run queries using "`check_word([]).`”. Each word must be represented as a list of symbols (n, e, a, etc.).
 
 * Valid words (true)
 
 ```prolog
-check_word(['N', i, n]).
-check_word(['N', i, m, r, a, i, s]).
-check_word(['N', u, m, e, n]).
-check_word(['N', a, u, g]).
-check_word(['N', a, u, g, r, i, m]).
-check_word(['N', o, g, o, t, h]).
-check_word(['N', e, g, y, t, h]).
+check_word([n, i, n]).
+check_word([n, i, m, r, a, i, s]).
+check_word([n, u, m, e, n]).
+check_word([n, a, u, g]).
+check_word([n, a, u, g, r, i, m]).
+check_word([n, o, g, o, t, h]).
+check_word([n, e, g, y, t, h]).
 ```
 
 * Invalid words (false)
 
 ```prolog
-check_word(['N', i]).
-check_word(['N', a, u, g, x]).
-check_word(['2', o, g, o]).
-check_word(['m', e, g, y]).
-check_word(['n', x]).
+check_word([n, i]).
+check_word([n, a, u, g, x]).
+check_word([2, o, g, o]).
+check_word([', e, g, y]).
+check_word([n, x]).
 ```
 
 <img width="2514" height="1285" alt="prolog_test" src="https://github.com/user-attachments/assets/d8bb7f71-05b4-4251-bf16-191c8f8fc93b" />
@@ -163,7 +163,7 @@ In a language such as Python, the same automaton would be implemented differentl
 
 - Transitions would be stored in a structure such as a dictionary instead of facts like `path()`, for example:
 ```python
-path = {('q0', 'N'): 'q1'}
+path = {('q0', n): 'q1'}
 ```
 - The execution would use a loop (e.g., for) instead of recursion, for example:
 ```python
